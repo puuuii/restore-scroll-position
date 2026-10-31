@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Restore Scroll Position",
+  "version": "1.0.0",
+  "description": "Webページ・ローカルPDFのスクロール位置を記憶し、再表示時に復元します。",
+  "permissions": [
+    "storage",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "file://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*",
+        "file://*/*"
+      ],
+      "js": ["lib/scroll-memory.js", "content.js"]
+    }
+  ]
+}

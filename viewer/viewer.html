@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <title>PDF - スクロール位置記憶</title>
+  <link rel="stylesheet" href="viewer.css" />
+</head>
+<body>
+  <header id="toolbar">
+    <span id="doc-title"></span>
+    <div class="spacer"></div>
+    <button id="zoom-out" title="縮小">−</button>
+    <button id="zoom-fit" title="横幅に合わせる">幅</button>
+    <button id="zoom-in" title="拡大">+</button>
+  </header>
+
+  <main id="pages"></main>
+
+  <div id="error" hidden></div>
+
+  <script src="../lib/scroll-memory.js"></script>
+  <script type="module" src="viewer.js"></script>
+</body>
+</html>

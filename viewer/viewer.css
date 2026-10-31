@@ -1,0 +1,72 @@
+:root {
+  color-scheme: dark light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #303030;
+  background: light-dark(#f4f4f4, #303030);
+}
+
+#toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+}
+
+#doc-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 60vw;
+}
+
+.spacer {
+  flex: 1;
+}
+
+button {
+  min-width: 32px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+#pages {
+  padding: 16px 0 48px;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+.page canvas {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+#error {
+  max-width: 560px;
+  margin: 24px auto;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #d93025;
+  color: #fff;
+}
